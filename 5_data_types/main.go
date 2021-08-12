@@ -49,7 +49,7 @@ func main() {
 	}
 
 	var p1 Person
-	fmt.Printf("%T %v\n", p1, p1)
+	fmt.Printf("%T %v %v\n", p1, p1.name, p1.age)
 
 	var x int = 2
 	var ptr *int = &x
