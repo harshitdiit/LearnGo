@@ -48,4 +48,65 @@ func main() {
 	sum := i + 5.0
 
 	fmt.Println(sum, global_var)
+
+	// Go always initializes variables with default values to avoid uninitialized errors
+	// int->0, float64->0, pointer->nil, string->""
+
+	/*
+		Naming converntions in go :
+		Keywords :
+		break        default      func         interface    select
+		case         defer        go           map          struct
+		chan         else         goto         package      switch
+		const        fallthrough  if           range        type
+		continue     for          import       return       var
+
+		Variable Naming :
+		Maximum Value -> mv, or maxValue
+		Go prefers non-verbose code
+	*/
+
+	// To declare constants we use const keyword
+	// You can use the program without using a constant
+	// Constants cannot be uninitialized
+
+	const days int = 7 // Typed constant
+	const x, y int = 7, 8
+	const z = 9.81 // Untyped constant
+
+	// In grouped constants, value is picked from previous const
+	const (
+		min1 = 400
+		min2
+	)
+
+	fmt.Println(min1, min2)
+
+	// Iota generates incremental integer constant values within a scope
+	const (
+		c1 int = iota
+		c2
+		c3
+	)
+
+	fmt.Println(c1, c2, c3)
+
+	// Iota usage example
+	const (
+		c11 int = iota*2 + 1
+		c22
+		c33
+	)
+
+	fmt.Println(c11, c22, c33)
+
+	// Skipping values
+	const (
+		f1 int = -(iota + 2)
+		_
+		f2
+		f3
+	)
+
+	fmt.Println(f1, f2, f3)
 }
