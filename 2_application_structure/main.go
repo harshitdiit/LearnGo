@@ -7,7 +7,7 @@ func main() {
 	* Add your workspace under $GOPATH using go env -w GOPATH = <enter path> to declare a directory as a workspace
 	* Directory structure :
 	* workspace
-	*	 |-- src (put source files here in directory structure)
+	*    |-- src (put source files here in directory structure)
 	*    |-- bin (contains installed packages)
 	*    |-- pkg (contains .a files)
 	**/
